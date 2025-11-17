@@ -1,0 +1,89 @@
+#icon{
+    color: white;
+}
+#mhead{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    justify-self: center;
+}
+header { 
+    background: rgb(226, 97, 33); 
+    height: 50px;
+    color: #fff;  
+    font-size: 20px; 
+    display: flex;
+    flex-direction: row;
+    gap: 1000px;
+    justify-content: center;
+    justify-items: center;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    transition: right 0.3s ease; 
+    z-index: 999;
+}
+#closeBtn {
+    color: rgb(226, 97, 33);
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+}
+li{
+   border: 1px solid rgb(203, 201, 201);
+   list-style: none;
+   padding: 5px;
+}
+a{
+    text-decoration: none;
+    color: rgb(158, 156, 156);
+}
+.closecircle{
+    border: 1px solid orangered;
+    width: 22px;
+    height: 23px;
+    border-radius: 50px; 
+}
+#container{
+    background-image: url('./ChatGPT\ Image\ Nov\ 17\,\ 2025\,\ 07_33_49\ PM.png' );
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#searchInput{
+    margin-top: 120px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+}
+#circle{
+    border: 1px solid rgb(250, 246, 244);
+    width: 27px;
+    height: 27px;
+    border-radius: 50px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(226, 97, 33);
+    text-align: center;
+    padding: 5px;
+    margin-left: 20px;
+
+}
+#circle,i{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+#container,h1{
+    color: #fff;
+    font-weight: bold;
+}
