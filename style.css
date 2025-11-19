@@ -66,24 +66,81 @@ a{
     padding: 10px;
     border-radius: 20px;
 }
-#circle{
+#searchbtn{
     border: 1px solid rgb(250, 246, 244);
-    width: 27px;
-    height: 27px;
+    width: 33px;
+    height: 33px;
     border-radius: 50px;
     font-size: 20px;
     color: white;
     background-color: rgb(226, 97, 33);
     text-align: center;
     padding: 5px;
-    margin-left: 20px;
+    margin-left: 10px;
 
 }
-#circle,i{
-    margin-top: 50px;
-    margin-left: 20px;
-}
 #container,h1{
-    color: #fff;
-    font-weight: bold;
+color: #fff;
+font-weight: bold;
+}
+.categories{
+margin:50px 20px;
+}
+#subhead
+{
+font-size:22px;
+font-weight:bold;
+
+}
+.line
+{
+width:80px;
+height:3px;
+background:orangered;
+margin-top:5px;
+}
+.category-cards{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+padding:40px;
+}
+.card
+{
+width:200px;
+background:#fff;
+padding:10px;
+border-radius:10px;
+text-align:center;
+cursor:pointer;
+box-shadow:0 3px 6px rgba(0,0,0,0.1);
+}
+.card img
+{
+width:100%;
+border-radius:10px;
+}
+
+#results
+{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+margin-top:30px;
+}
+.meal-card
+{
+width:260px;
+background:white;
+padding:20px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 3px 6px rgba(0,0,0,.1);
+}
+.meal-card img
+{
+width:100%;
+border-radius:10px;
 }

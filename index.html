@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
@@ -40,12 +40,20 @@
    <div id="container">
    <center>
     <div class="search-box">
-      <input id="searchInput" type="text" placeholder="search recipes here..."><i class="fa fa-search" id="circle"></i>
+      <input id="searchInput" type="text" placeholder="search recipes here...">
+      <button id="searchbtn"><i class="fa fa-search"></i></button>
     </div>
     <h1>What are your favorite cuisines?</h1>
     <div class="subtitle">PERSONALIZE YOUR EXPERIENCE</div>
 </div>
 </center>
-   <script src="./app.js"></script>
+<div class="categories">
+<span id="subhead">CATEGORIES</span>
+<div class="line"></div>
+</div>
+<div id="categoryCards" class="category-cards"></div>
+
+<div id="results"></div>
+<script src="./app.js"></script>
 </body>
 </html>
