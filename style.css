@@ -1,52 +1,27 @@
-#icon{
-    color: white;
+.container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
 }
-#mhead{
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    justify-self: center;
+
+.card{
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
 }
-header { 
-    background: rgb(226, 97, 33); 
-    height: 50px;
-    color: #fff;  
-    font-size: 20px; 
-    display: flex;
-    flex-direction: row;
-    gap: 1000px;
-    justify-content: center;
-    justify-items: center;
+
+.card:hover{
+  transform: scale(1.05);
 }
-.sidebar {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100vh;
-    background: #fff;
-    transition: right 0.3s ease; 
-    z-index: 999;
+
+.card img{
+  width: 100%;
+  border-radius: 8px;
 }
-#closeBtn {
-    color: rgb(226, 97, 33);
-    font-size: 18px;
-    text-align: center;
-    cursor: pointer;
-    display: block;
-    padding: 10px;
-    position: absolute;
-    right: 0;
-}
-li{
-   border: 1px solid rgb(203, 201, 201);
-   list-style: none;
-   padding: 5px;
-}
-a{
-    text-decoration: none;
-    color: rgb(158, 156, 156);
-}
+
 .closecircle{
     border: 1px solid orangered;
     width: 22px;
