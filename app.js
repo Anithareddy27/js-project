@@ -12,32 +12,14 @@ setTimeout(() => {
 sidebar.style.display = "none";
 }, 300);
 });
+let mealFinderHead = document.getElementById("mhead");
 
-/*async function loadCategories() {
-let res = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php");
-let data = await res.json();
-showCategoryList(data.categories);
-showCategoryCards(data.categories);
-}
-loadCategories();
-function showCategoryList(categories) {
-let list = document.getElementById("categoryList");
-list.innerHTML = categories.map(item => `<li data-cat="${item.strCategory}">${item.strCategory}</li>`).join("");
-document.querySelectorAll("#categoryList li").forEach(item => {
-item.addEventListener("click", () => searchCategory(item.dataset.cat));
+mealFinderHead.addEventListener("click", () => {
+    fetchCategories(); 
+    sidebar.style.display = "none"; 
 });
-}
-function showCategoryCards(categories) {
-    let cardsDiv = document.getElementById("categoryCards");
-    cardsDiv.innerHTML = categories.map(item => `
-        <div class="card" onclick="searchCategory('${item.strCategory}')">
-            <img src="${item.strCategoryThumb}">
-            <h3>${item.strCategory}</h3>
-        </div>
-    `).join("");
-}*/
-const apiUrl = "https://www.themealdb.com/api/json/v1/1/categories.php";
 
+let apiUrl = "https://www.themealdb.com/api/json/v1/1/categories.php";
 async function fetchCategories() {
     try {
         const response = await fetch(apiUrl);
@@ -47,22 +29,37 @@ async function fetchCategories() {
         console.log("Error:", error);
     }
 }
-
 function displayCategories(categories) {
     const container = document.getElementById("categoryContainer");
-
     const cards = categories.map(cat => {
         return `
             <div class="card">
             <div class="tag">${cat.strCategory}</div>
             <img src="${cat.strCategoryThumb}" alt="${cat.strCategory}">
-               
             </div>
         `;
     });
 
     container.innerHTML = cards.join("");
 }
-
-// Call function
 fetchCategories();
+
+// Fetch meals by category
+
+async function searchitem(category) {
+let response=await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
+let data=await response.json()
+  displayMeals(data.meals)
+}
+function displayMeals(meals){
+let container=document.getElementById('categoryContainer');
+ container.innerHTML=meals.map(item=>{
+return`
+<div class="meal-card'>
+<img src="${item.strMealThumb}">
+<h3>${item.strMeal}</h3>
+</div>
+`
+ }).join(" ");
+
+}

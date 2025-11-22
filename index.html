@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-   <!--heading section-->
-   <header>
-   <div class="icon">
-   <i class="fa-solid fa-house" ></i> <span id="mhead">MealFinder</span>
-   </div>
-   <div class="toggle">
-   <span id="openMenu">☰</span></div>
-   <div id="sidebar" class="sidebar">
-   <span id="closeBtn"><div class="closecircle">✖</div></span><br> 
-   <ul id="categoryList">
-  <li><a href="">Beef</a></li>
+<!--heading section-->
+<header class="navbar">
+<div class="icon">
+<i class="fa-solid fa-house" ></i><span id="mhead">MealFinder</span>
+</div>
+<div class="toggle">
+<span id="openMenu">☰</span></div>
+<div id="sidebar" class="sidebar">
+<div class="close-wrapper" id="closeBtn">
+    <div class="closecircle"></div>
+    <span class="close-icon">✖</span>
+</div>
+ 
+  <ul id="categoryList">
+  <li onclick="searchitem('Beef')"><a href="">Beef</a></li>
   <li><a href="">Chicken</a></li>
   <li><a href="">Dessert</a></li>
   <li><a href="">Lamb</a></li>
@@ -40,18 +43,17 @@
    <div id="container">
    <center>
     <div class="search-box">
-      <input id="searchInput" type="text" placeholder="search recipes here...">
-      <button id="searchbtn"><i class="fa fa-search"></i></button>
+    <input id="searchInput" type="text" placeholder="search recipes here...">
+    <button id="searchbtn"><i class="fa fa-search"></i></button>
     </div>
     <h1>What are your favorite cuisines?</h1>
     <div class="subtitle">PERSONALIZE YOUR EXPERIENCE</div>
 </div>
 </center>
 <section class="category-section">
-    <h2>CATEGORIES</h2>
-    <div class="line"></div>
+  <h2>CATEGORIES</h2>
+  <div class="line"></div>
 </section>
-
 <div id="categoryContainer" class="categories"></div>
 <script src="./app.js"></script>
 </body>
