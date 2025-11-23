@@ -81,6 +81,7 @@ font-weight: bold;
   list-style: none;
   padding: 5px 0;
   border-bottom: 1px solid #eee;
+  color: gray;
 }
 #categoryList li a {
   text-decoration: none;
@@ -88,8 +89,29 @@ font-weight: bold;
   font-size: 18px;
 } 
 #categoryList li a:hover{
-  color: #f36b10;
+color: #f36b10;
 }
+/*search section*/
+.meals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.meal-card {
+  width: 250px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.meal-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
 .container{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -151,13 +173,13 @@ font-weight: bold;
   width: 80px;
   height: 3px;
   background: #e94e1b;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-.categories {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 0 40px;
+#categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 40px;
 }
 .card {
 width: 250px;
@@ -184,16 +206,52 @@ font-weight: bold;
 border-radius: 5px;
 font-size: 14px;
 }
+.meals{
+  display: none;
+}
+.meals .title {
+  margin-left: 40px;
+  margin-top: 50px;
+  font-size: 26px;
+  margin-bottom: 4px;
+  padding-bottom: 0;
+}
+.meals .line-2{
+  width: 30px;
+  height: 3px;
+  background: #e94e1b;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  margin-top: 0;
+  
+ 
+}
+.meals-container {
+display: flex;
+flex-wrap: wrap;
+gap: 5px;
+margin-left: 50px;
+justify-content: space-between;     
+}
 .meal-card {
-width: 200px;
-padding: 10px;
-margin: 10px;
-border-radius: 8px;
-box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-text-align: center;
+    width: 200px;
+    height: 230px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.meal-card:hover {
+    transform: scale(1.05);
 }
 .meal-card img {
-width: 100%;
-border-radius: 10px;
+    width:180px;
+    height: 180px;
+    border-radius: 10px;
 }
-
+.meal-card h4 {
+    margin: 10px 0 0;
+    font-size: 14px;
+}

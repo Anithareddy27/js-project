@@ -22,20 +22,20 @@
 </div>
  
   <ul id="categoryList">
-  <li onclick="searchitem('Beef')"><a href="">Beef</a></li>
-  <li><a href="">Chicken</a></li>
-  <li><a href="">Dessert</a></li>
-  <li><a href="">Lamb</a></li>
-  <li><a href="">Miscellaneous</a></li>
-  <li><a href="">Pasta</a></li>
-  <li><a href="">Pork</a></li>
-  <li><a href="">SeaFood</a></li>
-  <li><a href="">Side</a></li>
-  <li><a href="">Starter</a></li>
-  <li><a href="">Vegan</a></li>
-  <li><a href="">Vegetarian</a></li>
-  <li><a href="">Breakfast</a></li>
-  <li><a href="">Goat</a></li>
+ <li onclick="searchitem('Beef')">Beef</li>
+ <li onclick="searchitem('Chicken')">Chicken</li>
+ <li onclick="searchitem('Dessert')">Dessert</li>
+ <li onclick="searchitem('Lamb')">Lamb</li>
+ <li onclick="searchitem('Miscellaneous')">Miscellaneous</li>
+ <li onclick="searchitem('Pasta')">Pasta</li>
+ <li onclick="searchitem('Pork')">Pork</li>
+ <li onclick="searchitem('Seafood')">Seafood</li>
+ <li onclick="searchitem('Side')">Side</li>
+ <li onclick="searchitem('Starter')">Starter</li>
+ <li onclick="searchitem('Vegan')">Vegan</li>
+ <li onclick="searchitem('Vegetarian')">Vegetarian</li>
+ <li onclick="searchitem('Breakfast')">Breakfast</li>
+ <li onclick="searchitem('Goat')">Goat</li> 
    </ul>
   </div>
    </header> 
@@ -49,12 +49,18 @@
     <h1>What are your favorite cuisines?</h1>
     <div class="subtitle">PERSONALIZE YOUR EXPERIENCE</div>
 </div>
+<div id="mealsContainer" class="meals"></div>
 </center>
 <section class="category-section">
   <h2>CATEGORIES</h2>
   <div class="line"></div>
+  <div id="categories"></div>
 </section>
-<div id="categoryContainer" class="categories"></div>
+<div class="meals">
+<h2 class="title">Meals</h2>
+<div class="line-2"></div>
+<div id="mealsContainer" class="meals-container"></div>
+</div>
 <script src="./app.js"></script>
 </body>
 </html>
